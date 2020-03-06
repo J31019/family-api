@@ -7,7 +7,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func errorResponse(w http.ResponseWriter, body interface{}, statusCode int) {
+func makeResponse(w http.ResponseWriter, body interface{}, statusCode int) {
 	w.WriteHeader(statusCode)
 	if body == nil {
 		return

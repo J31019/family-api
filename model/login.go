@@ -10,4 +10,5 @@ type LoginRequest struct {
 type LoginResponse struct {
 	Result bool   `json:"result"`
 	Error  string `json:"error,omitempty"`
+	Token  string `json:"token,omitempty"`
 }
