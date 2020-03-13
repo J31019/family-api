@@ -17,3 +17,24 @@ func (s Service) Login(ctx context.Context, req model.LoginRequest) (res model.L
 	res.Error = "invalid login or password"
 	return
 }
+
+// Register user.
+func (s Service) Register(ctx context.Context, req model.RegisterRequest) (res model.RegisterResponse) {
+	if strings.EqualFold(req.Email, "test@mail.ru") {
+		res.Error = "user with provided email already exists"
+		return
+	}
+	res.Result = true
+	return
+}
+
+// Submit user registration.
+func (s Service) Submit(ctx context.Context, req model.SubmitRequest) (res model.SubmitResponse) {
+	if !strings.EqualFold(req.Code, "qwerty") {
+		res.Error = "invalid code"
+		return
+	}
+	res.Result = true
+	res.Token = "Dhx0L5jSHaandVLAeKVBanyoOlbIQU"
+	return
+}

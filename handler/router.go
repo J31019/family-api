@@ -22,5 +22,11 @@ func New(service controller.Service) API {
 	api.Path("/login").
 		Methods(http.MethodPost).
 		HandlerFunc(api.login)
+	api.Path("/register").
+		Methods(http.MethodPost).
+		HandlerFunc(api.register)
+	api.Path("/submit").
+		Methods(http.MethodPost).
+		HandlerFunc(api.submit)
 	return api
 }
