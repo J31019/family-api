@@ -28,5 +28,11 @@ func New(service controller.Service) API {
 	api.Path("/submit").
 		Methods(http.MethodPost).
 		HandlerFunc(api.submit)
+	api.Path("/video").
+		Methods(http.MethodGet).
+		HandlerFunc(api.videoList)
+	api.Path("/video/{id}").
+		Methods(http.MethodGet).
+		HandlerFunc(api.videoByID)
 	return api
 }

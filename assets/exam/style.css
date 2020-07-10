@@ -1,0 +1,76 @@
+body {
+    padding: 16px;
+    text-align: center;
+}
+
+.video-block {
+    display: inline-block;
+    padding: 6px;
+    margin: 6px;
+    width: 360px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+}
+
+.video-block img {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+}
+
+.video-block .name {
+   text-align: left;
+   font-size: 14px;
+   font-family: monospace;
+   height: 32px;
+}
+
+.video-block .duration {
+    text-align: left;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+ }
+
+ #dialog {
+     display: none;
+     position: absolute;
+     left: 16px;
+     right: 16px;
+     top: 16px;
+     bottom: 16px;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+     z-index: 99;
+     background: #fff;
+     border-radius: 4px;
+     padding: 32px;
+     text-align: left;
+ }
+
+ #dialog video {
+     display: block;
+     width: 100%;
+     height: calc(100% - 60px);
+ }
+
+ #dialog span {
+     font-size: 14px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ #dialog .close-btn {
+     background: rgba(0,0,0,0.3);
+     color: #fff;
+     position: absolute;
+     padding: 8px;
+     text-align: center;
+     font-weight: 700;
+     font-size: 16px;
+     border-radius: 50%;
+     right: 6px;
+     top: 6px;
+     height: 32px;
+     width: 32px;
+     border: none;
+     cursor: pointer;
+ }
